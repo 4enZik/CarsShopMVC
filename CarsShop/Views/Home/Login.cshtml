@@ -1,0 +1,34 @@
+﻿@model CarsShop.Models.AccountLogin
+
+@{
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<div class="font-monospace text-center">
+    Login
+</div>
+
+
+<div class="container text-center">
+    <form asp-controller="Home" asp-action="Login" method="post">
+        <div class="flex-column">
+            <div class="mb-3">
+                <label asp-for="Login" class="form-label">Login</label>
+                <input type="text" class="form-control text-center" asp-for="Login">
+            </div>
+
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input type="text" class="form-control text-center" asp-for="Password">
+            </div>
+            <button type="button" class="btn btn-outline-danger btn-sm">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Log Ing</a>
+            </button>
+        </div>
+    </form>
+</div>
